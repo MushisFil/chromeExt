@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OptimusPrinceps';
+    src: url('OptimusPrinceps.ttf') format('truetype');
+  }
+  
+  div.overlay-text {
+    font-family: 'OptimusPrinceps', serif;
+  }
+  

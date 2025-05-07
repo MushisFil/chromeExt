@@ -1,10 +1,31 @@
 {
-    "name": "Email Sent",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": "im.png"
+  "name": "Elden Ring Email Sent",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "https://outlook.office365.com/*",
+    "https://outlook.office.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://outlook.office365.com/*",
+        "https://outlook.office.com/*"
+      ],
+      "js": ["content.js"],
+      "all_frames": true
     }
-  }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["elden-ring-sound.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
